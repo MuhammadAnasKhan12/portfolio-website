@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --font-outfit: 'Outfit', sans-serif;
+  --purple: #CBACF9;
+}
+
+
+
+body {
+  font-family: var(--font-outfit);
+
+}
+
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+@theme {
+
+  --color-purple: var(--purple);
+
+  /* Container Settings */
+  --container-padding: 2rem;
+  --container-center: true;
+  --breakpoint-2xl: 1400px;
+
+  
+
+  /* Border Radius */
+  --border-radius-lg: var(--radius);
+  --border-radius-md: calc(var(--radius) - 2px);
+  --border-radius-sm: calc(var(--radius) - 4px);
+
+  /* Keyframes */
+  @keyframes accordion-down {
+    from { height: 0 }
+    to { height: var(--radix-accordion-content-height) }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height) }
+    to { height: 0 }
+  }
+  
+  
+  @keyframes shimmer {
+    from { background-position: 0 0 }
+    to { background-position: -200% 0 }
+  }
+  @keyframes moveHorizontal {
+    0% { transform: translateX(-50%) translateY(-10%) }
+    50% { transform: translateX(50%) translateY(10%) }
+    100% { transform: translateX(-50%) translateY(-10%) }
+  }
+  @keyframes moveInCircle {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+  }
+  @keyframes moveVertical {
+    0% { transform: translateY(-50%) }
+    50% { transform: translateY(50%) }
+    100% { transform: translateY(-50%) }
+  }
+  @keyframes scroll {
+    to { transform: translate(calc(-50% - 0.5rem)) }
+  }
+
+  /* Animations */
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+  --animation-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animation-shimmer: shimmer 2s linear infinite;
+  --animation-first: moveVertical 30s ease infinite;
+  --animation-second: moveInCircle 20s reverse infinite;
+  --animation-third: moveInCircle 40s linear infinite;
+  --animation-fourth: moveHorizontal 40s ease infinite;
+  --animation-fifth: moveInCircle 20s ease infinite;
+  --animation-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+
+
+
