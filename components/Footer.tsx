@@ -56,15 +56,6 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="w-full pt-20 relative overflow-hidden" id="contact">
-      {/* Background grid */}
-      <div className="absolute inset-0 -bottom-72">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
       {/* Centered section */}
       <div className="relative flex flex-col items-center text-center z-10 px-4">
         <h1 className="text-white font-bold text-5xl md:text-[4rem] text-center lg:max-w-[45vw]">
@@ -222,10 +213,6 @@ const Footer: React.FC = () => {
 
       {/* Bottom footer bar */}
       <div className="relative z-10 flex mt-16 md:flex-row flex-col justify-between items-center px-4 gap-4">
-        <p className="md:text-lg text-sm text-white text-center">
-          Copyright © 2025 Muhammad Anas Khan
-        </p>
-
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (
             <a
@@ -250,6 +237,10 @@ const Footer: React.FC = () => {
             </a>
           ))}
         </div>
+
+        <p className="md:text-lg text-sm text-white text-center">
+          Copyright © 2025 Muhammad Anas Khan
+        </p>
       </div>
     </footer>
   );

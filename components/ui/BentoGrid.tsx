@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import { StatsSection } from "@/components/StatsSection";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
@@ -114,9 +115,7 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           // add background animation , remove the p tag
-          <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
         )}
 
         <div
@@ -140,8 +139,6 @@ export const BentoGridItem = ({
 </div>
 
 
-          {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
 
           {/* Tech stack list div */}
           {id === 3 && (

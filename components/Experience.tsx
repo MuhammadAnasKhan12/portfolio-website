@@ -3,7 +3,7 @@ import { workExperience } from "@/data";
 
 const Experience = () => {
   return (
-    <section className="py-20 w-full relative bg-transparent">
+    <section className="py-2=10 w-full relative bg-transparent">
       <h1 className="text-white font-bold text-4xl md:text-[4rem] text-center mb-16">
         My <span className="text-purple">work experience</span>
       </h1>
